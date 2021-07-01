@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://thymeleaf.org ">
+<head>
+    <meta charset="UTF-8">
+    <title>All customers</title>
+
+</head>
+<body>
+
+    <div th:each="customer : ${customers}">
+        <p th:text="${customer.getName()}">cust</p>
+    </div>
+    <a href="/spring_mvc_app_war_exploded/customers/new">Add customer</a>
+
+</body>
+</html>
